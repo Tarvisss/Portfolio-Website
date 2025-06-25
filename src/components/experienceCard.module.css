@@ -1,0 +1,86 @@
+
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+}
+
+h1{
+  margin: 2.5rem;
+  text-align: center;
+}
+
+.card-container {
+  flex: 1;
+  display: flex;
+  margin-top: 1rem;
+} 
+
+.text-area{
+  margin: 0;
+  padding: 10px;
+  
+  min-width: 400px;
+  max-width: 800px;
+  /* border: 2px solid white; */
+  /* border-radius: 8px; */
+  height: auto;
+}
+
+.text {
+  text-shadow: 3px 3px 10px black;
+  
+  justify-content: space-around;
+  gap: 1.5rem;
+  
+}
+
+.text a{
+  
+  padding: 6px;
+}
+.text a img{
+  border: 2px solid white;
+  border-radius: 15px;
+  box-shadow: 3px 8px 10px black;
+  transition: filter 300ms;
+}
+
+.text a img:hover{
+
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 15px;
+  box-shadow: 3px 8px 10px black;
+  filter: brightness(0.7);
+  filter: drop-shadow(0px 0px 1px white);
+  
+}
+.text > div {
+  flex: 1;
+}
+
+.closing-statement {
+  text-shadow: 3px 3px 10px black;
+  line-height: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* if vertical centering needed */
+  margin: 2rem auto; /* horizontally centers the element itself */
+  text-align: center;
+  max-width: 800px;
+}
+
+
+.footer {
+  display: flex;
+  font-size: x-large;
+  text-align: center;
+  justify-content: center;
+  text-shadow: 4px 4px 12px black;
+  text-overflow: ellipsis;
+  background-color: #051021; /* optional styling */
+}
+
+
+
