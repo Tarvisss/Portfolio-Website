@@ -22,9 +22,9 @@ function Contact() {
             <div>
               <h2>Social Links</h2>
               <hr/>
-              <a href="https://www.linkedin.com/in/travis-souther"><img src="public/icons8-linkedin-50 (1).png" width={"60px"} alt="LinkedIn" /></a>
-              <a href="https://www.facebook.com/tsouther1/"><img src="public/icons8-facebook-50 (1).png" width={"60px"} alt="Facebook" /></a>
-              <a href="https://www.instagram.com/tssouther/"><img src="public/icons8-instagram-50 (1).png" width={"60px"} alt="Instagram" /></a>
+              <a href="https://www.linkedin.com/in/travis-souther"><img src="/icons8-linkedin-50 (1).png" width={"60px"} alt="LinkedIn" /></a>
+              <a href="https://www.facebook.com/tsouther1/"><img src="/icons8-facebook-50 (1).png" width={"60px"} alt="Facebook" /></a>
+              <a href="https://www.instagram.com/tssouther/"><img src="/icons8-instagram-50 (1).png" width={"60px"} alt="Instagram" /></a>
             </div>
           </div>
         </div>

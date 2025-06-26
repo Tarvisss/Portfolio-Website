@@ -34,7 +34,7 @@ html, body {
   padding: 0;
   height: 100%;
   background-color: #022B3A;
-  background-image: url('public/pexels-marek-piwnicki-3907296-8193814.jpg'); /* No "public" in the path */
+  background-image: url('/pexels-marek-piwnicki-3907296-8193814.jpg'); /* No "public" in the path */
   opacity: .98;
   background-size: cover;        /* Fill entire screen */
   background-position: center;   /* Center the image */
