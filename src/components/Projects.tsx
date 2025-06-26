@@ -21,12 +21,12 @@ function Projects() {
                     <div>
                       <h2>Jam Space</h2>
                       <br />
-                      <a href="https://jam-space.onrender.com"><img src="public/Jam_Space1.png" alt="" /></a>
+                      <a href="https://jam-space.onrender.com"><img src="/Jam_Space1.png" alt="" /></a>
                     </div>
                     <div>
                       <h2>Fit+Together</h2>
                       <br />
-                      <a href="https://fit-together-frontend.onrender.com"><img src="public/Screenshot from 2025-06-24 12-18-52.png" alt="" /></a>
+                      <a href="https://fit-together-frontend.onrender.com"><img src="/Screenshot from 2025-06-24 12-18-52.png" alt="" /></a>
                     </div>
                   </div>
                 </div>

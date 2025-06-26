@@ -2,18 +2,13 @@
 import Styles from "./navbar.module.css"
 import { Link } from "react-router-dom";
 
-// type NavbarProps = {
-//     children: ReactNode;
-// };
-// {children}: NavbarProps
-
 function Navbar() {
   return (
     <div className={Styles["nav-container"]}>
         <nav className={Styles["navbar"]}>
           <Link to="/">
           <div className={Styles["nav-name"]}>
-            <img src="public/yoyo.png" alt="" className={Styles["nav-logo"]} />
+            <img src="/yoyo.png" alt="" className={Styles["nav-logo"]} />
             <span>Travis Souther</span>
           </div>
           </Link>
