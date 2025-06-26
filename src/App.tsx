@@ -5,14 +5,6 @@ import Contact from "./components/Contact"
 import Projects from "./components/Projects"
 import './App.css'
 import { Routes, Route } from "react-router-dom"
-// import NavItem from "./components/NavItem"
-// import ComputerIcon  from './icons/computer-svgrepo-com (2).svg?react';
-// import ContactIcon from "./icons/email-8-svgrepo-com (1).svg?react"
-// import ExperienceIcon from "./icons/work-with-tools-work-fix-repair-svgrepo-com.svg?react"
-
-
-
-
 
 function App() {
 

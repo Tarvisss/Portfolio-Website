@@ -21,9 +21,7 @@ function Experience() {
             </div>
             <div>
               <h2>Black Mountian sands</h2>
-              <p>Collaborated with other technicians to maintain safe and consistent plant operations. Each task presented unique challenges, requiring quick problem-solving skills and the ability to react efficiently under pressure.
-
-</p>
+              <p>Collaborated with other technicians to maintain safe and consistent plant operations. Each task presented unique challenges, requiring quick problem-solving skills and the ability to react efficiently under pressure.</p>
             </div>
           </div>
         </div>

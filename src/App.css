@@ -1,14 +1,8 @@
 
-/* @font-face {
-  font-family: 'Rosehot';
-  src: url('/fonts/Rosehot.ttf') format('truetype');
-} */
-
 @font-face {
   font-family: 'Agamtoh';
   src: url('/fonts/Agamtoh.ttf') format('truetype');
 }
-
 
 @font-face {
   font-family: 'Neuropol';
@@ -18,7 +12,6 @@
 body {
   font-family: 'Neuropol', sans-serif;
 }
-
 
 :root {
   /* --bg-accent: #020f24; */
