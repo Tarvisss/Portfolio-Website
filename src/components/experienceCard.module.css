@@ -81,12 +81,10 @@ h1{
 }
 
 @media (max-width: 600px) {
-   h1 {
-    padding: 1rem;
-    font-size: 1.75rem;
-    margin: 0 auto;
-    max-width: 100%;
-    overflow-wrap: break-word;
+     h1 {
+    display: none;
+    /* margin: 1.5rem 1rem; 
+    font-size: 1.75rem;   */
   }
   .text {
     flex-direction: column;

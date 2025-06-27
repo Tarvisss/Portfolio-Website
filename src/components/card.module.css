@@ -90,8 +90,9 @@ h1{
 @media (max-width: 600px) {
 
    h1 {
-    margin: 1.5rem 1rem; /* less space on mobile */
-    font-size: 1.75rem;  /* optional: slightly smaller heading */
+    display: none;
+    /* margin: 1.5rem 1rem; 
+    font-size: 1.75rem;   */
   }
   
   .text {
@@ -100,12 +101,15 @@ h1{
   }
 
   .text a img {
-    height: 70px;
-    width: 70px
+    height: 60px;
+    width: 60px
    
   }
 
   .text-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
     min-width: auto;
     width: 100%;

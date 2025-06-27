@@ -51,11 +51,12 @@ h1{
 }
 @media (max-width: 600px) {
 
-   h1 {
-    margin: 1.5rem 1rem; /* less space on mobile */
-    font-size: 1.75rem;  /* optional: slightly smaller heading */
+      h1 {
+    display: none;
+    /* margin: 1.5rem 1rem; 
+    font-size: 1.75rem;   */
   }
-  
+
   .text-area {
     line-height: 2;
     font-size: large;
