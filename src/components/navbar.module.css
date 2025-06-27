@@ -58,14 +58,17 @@ body {
     
 } 
 
-@media (max-width: 768px) {
-  .nav {
+@media (max-width: 600px) {
+  .navbar {
     flex-direction: column;
     align-items: flex-start;
     height: auto;
     padding: 0.5rem 1rem;
   }
-
+  .nav-name {
+    font-size: 1.2rem;
+    text-align: center;
+  }
   .nav ul {
     flex-direction: column;
     width: 100%;
@@ -75,6 +78,10 @@ body {
 
   .nav a {
     padding: 0.5rem 0;
+  }
+  .nav-logo {
+    width: 200px;
+    height: auto;
   }
 } 
 
