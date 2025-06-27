@@ -47,11 +47,7 @@ h1{
   
   padding: 6px;
 }
-#projects{
-  height: 100px;
-  width: 100px;
-  border: none;
-}
+
 .text a img{
   border-radius: 15px;
   box-shadow: 3px 8px 10px black;
@@ -91,5 +87,22 @@ h1{
   background-color: #051021; /* optional styling */
 }
 
+@media (max-width: 600px) {
+  .text {
+    flex-direction: column;
+    align-items: center; /* center items vertically */
+  }
 
+  .text a img {
+    height: auto;
+    width: 60%; /* make image responsive */
+    max-width: 300px;
+  }
+
+  .text-area {
+    min-width: auto;
+    width: 100%;
+    padding: 1rem;
+  }
+}
 
