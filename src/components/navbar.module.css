@@ -114,6 +114,7 @@ a {
   .nav-name {
     font-size: 1.2rem;
     justify-content: flex-start;
+    gap: 1rem;
   }
   /* .nav ul {
     flex-direction: column;
@@ -127,6 +128,6 @@ a {
   } */
   .nav-logo {
     width: 180px;
-    height: auto;
+    height: 80px;
   }
 } 
