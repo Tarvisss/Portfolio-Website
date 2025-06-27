@@ -46,11 +46,15 @@ body {
 } 
 .nav-logo {
   position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   z-index: 0;
-  width: 300px;
-  height: 120px;
-  opacity: .8;
+  opacity: 0.8;
+  width: 180px;
+  height: 80px;
 }
+
 
 .nav-name span {
    position: relative;
@@ -112,10 +116,11 @@ a {
   justify-content: flex-start;
 }
   .nav-name {
-    font-size: 1.2rem;
-    justify-content: flex-start;
-    gap: 1rem;
-  }
+  font-size: 1.2rem;
+  justify-content: center;  /* ← was flex-start */
+  align-items: center;      /* ← ensure vertical centering */
+}
+
 
   .nav-logo {
     width: 180px;
