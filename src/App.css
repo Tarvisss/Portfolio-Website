@@ -61,6 +61,11 @@ button:focus-visible {
 }
 
 @media (prefers-color-scheme: light) {
+  h1 {
+  text-align: center;
+  font-size: 1.5em;
+  text-shadow:4px 4px 20px #000000;
+}
    :root {
     max-width: 600 px;
     color: #213547;

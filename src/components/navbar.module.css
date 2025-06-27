@@ -116,18 +116,10 @@ a {
     justify-content: flex-start;
     gap: 1rem;
   }
-  /* .nav ul {
-    flex-direction: column;
-    width: 100%;
-    gap: 1rem;
-    padding: 1rem 0;
-  } */
 
-  /* .nav a {
-    padding: 0.5rem 0;
-  } */
   .nav-logo {
     width: 180px;
     height: 80px;
+    align-items: center;
   }
 } 
