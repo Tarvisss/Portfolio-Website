@@ -50,6 +50,12 @@ h1{
   background-color: #051021; /* optional styling */
 }
 @media (max-width: 600px) {
+
+   h1 {
+    margin: 1.5rem 1rem; /* less space on mobile */
+    font-size: 1.75rem;  /* optional: slightly smaller heading */
+  }
+  
   .text-area {
     line-height: 2;
     font-size: large;

@@ -88,13 +88,20 @@ h1{
 }
 
 @media (max-width: 600px) {
+
+   h1 {
+    margin: 1.5rem 1rem; /* less space on mobile */
+    font-size: 1.75rem;  /* optional: slightly smaller heading */
+  }
+  
   .text {
+    flex-direction: column;
     align-items: center; /* center items vertically */
   }
 
   .text a img {
     height: 70px;
-    width: 60%; /* make image responsive */
+    width: 70px
    
   }
 
