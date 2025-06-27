@@ -10,11 +10,7 @@ function App() {
 
   return (
     <>
-      <Navbar>
-        {/* <NavItem icon={<ComputerIcon/>}/>
-        <NavItem icon={<ContactIcon/>}/>
-        <NavItem icon={<ExperienceIcon/>}/> */}
-      </Navbar>
+      <Navbar/>
         <div>
           <Routes>
             <Route path="/" element={<LandingPage/>}/>
