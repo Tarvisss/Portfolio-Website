@@ -61,9 +61,10 @@ h1{
   }
 
   .footer {
+    margin: 0 auto;
     font-size: large;
-    width: 85%;
     text-align: center;
+    justify-content: center;
   }
 }
 
