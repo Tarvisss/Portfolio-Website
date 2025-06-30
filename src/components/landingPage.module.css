@@ -33,7 +33,6 @@ h1{
   line-height: 3.5;
   font-size: x-large;
   text-align: center;
-  text-shadow: 0px 1px 12px black;
   height: auto;
   text-overflow: ellipsis;
   
@@ -44,7 +43,6 @@ h1{
   font-size: x-large;
   text-align: center;
   justify-content: center;
-  text-shadow: 0px 1px 12px black;
   text-overflow: ellipsis;
   background-color: #051021; /* optional styling */
 }

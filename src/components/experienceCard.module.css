@@ -27,8 +27,6 @@ h1{
 }
 
 .text {
-  text-shadow: 0px 1px 10px black;
-  
   justify-content: space-around;
   gap: 1.5rem;
   
@@ -59,7 +57,6 @@ h1{
 }
 
 .closing-statement {
-  text-shadow: 3px 3px 10px black;
   line-height: 2;
   display: flex;
   justify-content: center;
@@ -75,7 +72,6 @@ h1{
   font-size: x-large;
   text-align: center;
   justify-content: center;
-  text-shadow: 4px 4px 12px black;
   text-overflow: ellipsis;
   background-color: #051021; /* optional styling */
 }

@@ -9,31 +9,33 @@
   src: url('/fonts/Neuropol.otf') format('opentype');
 }
 
+/* Base font and body setup */
 body {
   font-family: 'Neuropol', sans-serif;
-}
-
-:root {
-  /* --bg-accent: #020f24; */
-  --nav-size: 60px;
-  --speed: 500ms
-  font-weight: 350;
-  color: #FFFFFF;
-  background-image: url("public/pexels-blaque-x-264516-932638.jpg");
-}
-
-html, body {
   margin: 0;
   padding: 0;
   height: 100%;
-  background-color: #022B3A;
-  background-image: url('/pexels-marek-piwnicki-3907296-8193814.jpg'); /* No "public" in the path */
-  opacity: .98;
-  background-size: cover;        /* Fill entire screen */
-  background-position: center;   /* Center the image */
-  background-repeat: no-repeat;  /* Don't repeat it */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   box-shadow: 1px 1px 20px black;
+  transition: background-image 0.5s ease, color 0.5s ease;
 }
+
+/* Dark Mode Styles */
+.page-wrapper-dark {
+  color: #ffffff;
+  background-image: url("/pexels-marek-piwnicki-3907296-8193814.jpg");
+}
+
+/* Light Mode Styles */
+.page-wrapper-light {
+  color: #000000;
+  background-image: url("/vecteezy_ai-generated-minimalist-wave-white-background_38585123.jpg");
+  text-shadow: 0px 1px 1px#000000;
+}
+
+
 
 h1 {
   font-size: 3.2em;
