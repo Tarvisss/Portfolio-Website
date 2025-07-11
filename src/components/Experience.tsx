@@ -34,6 +34,7 @@ function Experience() {
               <h3>Maintenance Technician III</h3>
               <p>Collaborated with other technicians to maintain safe and consistent plant operations. Each task presented unique challenges, requiring quick problem-solving skills and the ability to react efficiently under pressure.</p>
             </div>
+            <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="aae6384c-cbfa-4bbb-991f-b08bba55138a" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
           </div>
         </div>
       </div>
