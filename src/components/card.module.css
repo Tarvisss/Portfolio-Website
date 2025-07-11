@@ -4,7 +4,6 @@
   flex-direction: column;
   min-height: 100vh;  
   text-align: center;
-
 }
 .page p {
   margin-bottom: 0;
@@ -40,22 +39,19 @@ h1{
 }
 
 .text a{
-  
   padding: 6px;
 }
 
 .text a img{
   border-radius: 15px;
-  box-shadow: 3px 8px 10px black;
   transition: filter 300ms;
 }
 
 .text a img:hover{
   border: 2px solid white;
   border-radius: 15px;
-  box-shadow: 3px 8px 10px black;
+  box-shadow: 1px 1px 10px black;
   filter: brightness(0.7);
-  
 }
 .text > div {
   flex: 1;
@@ -65,8 +61,8 @@ h1{
   line-height: 2;
   display: flex;
   justify-content: center;
-  align-items: center; /* if vertical centering needed */
-  margin: 2rem auto; /* horizontally centers the element itself */
+  align-items: center;
+  margin: 8rem auto; 
   text-align: center;
   max-width: 800px;
 }

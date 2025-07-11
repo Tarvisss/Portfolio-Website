@@ -23,15 +23,16 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 5px solid #E1E5F2 ;
-  border-radius: 5px;
+  border-bottom: 1px solid #E1E5F2 ;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
   gap: 3rem;
   padding: 0 1rem;
   flex-wrap: wrap;
   background-color: #04141c;
   padding: 0 1rem;
-  border-bottom: var(--border); 
-  box-shadow: 5px 5px 20px black;
+  
+  box-shadow: 0px 0px 10px black;
 }
 
  .nav-name{

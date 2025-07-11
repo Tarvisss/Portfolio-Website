@@ -21,19 +21,21 @@ h1{
 
 .text-area{
   margin: 0;
-  padding: 10px;
   max-width: 800px;
   height: auto;
 }
 
 .text {
   justify-content: space-around;
+  padding-left: 40px;
+  line-height: 1.2;
   gap: 1.5rem;
   
 }
-
+.text p {
+line-height: 1.5;
+}
 .text a{
-  
   padding: 6px;
 }
 .text a img{
