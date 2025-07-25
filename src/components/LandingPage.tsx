@@ -7,7 +7,7 @@ const [visitorCount, setVisitorCount] = useState(null)
   const namespace = 'portfolio-ow6k';
   const key = 'visits'
   if (!localStorage.getItem('visited')) {
-    fetch(`https://api.countapi.xyz/get/${namespace}/${key}`)
+    fetch(`https://api.countapi.xyz/hit/${namespace}/${key}`)
       .then(res => res.json())
       .then(data => {
         setVisitorCount(data.value);
