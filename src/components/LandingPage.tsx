@@ -1,26 +1,6 @@
 import Styles from "./landingPage.module.css";
-import { useEffect, useState } from "react";
+
 function LandingPage() {
-const [visitorCount, setVisitorCount] = useState(null)
-  useEffect(() => {
-
-  const namespace = 'portfolio-ow6k';
-  const key = 'visits'
-  if (!localStorage.getItem('visited')) {
-    fetch(`https://api.countapi.xyz/hit/${namespace}/${key}`)
-      .then(res => res.json())
-      .then(data => {
-        setVisitorCount(data.value);
-        localStorage.setItem('visited', 'true');
-      });
-  } else {
-    // just get the current value without incrementing
-    fetch(`https://api.countapi.xyz/get/${namespace}/${key}`)
-      .then(res => res.json())
-      .then(data => setVisitorCount(data.value));
-  }
-}, []);
-
   return (
     <div className={Styles["page"]}>
       <div className={Styles["card-container"]}>
@@ -33,9 +13,18 @@ const [visitorCount, setVisitorCount] = useState(null)
 
       <footer className={Styles["footer"]}>
         <p>Thanks for visiting!</p>
-        {visitorCount !== null && <p>Visitor#: {visitorCount}</p>}
+        
+        {/* HitWebCounter Widget */}
+        <a href="https://www.hitwebcounter.com" target="_blank" rel="noopener noreferrer">
+          <img 
+            src="https://hitwebcounter.com/counter/counter.php?page=21239517&style=0036&nbdigits=5&type=page&initCount=0"
+            title="Counter Widget"
+            alt="Visit counter For Websites"
+          />
+        </a>
       </footer>
     </div>
   );
 }
+
 export default LandingPage;
