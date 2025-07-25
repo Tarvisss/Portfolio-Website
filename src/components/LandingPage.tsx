@@ -16,10 +16,9 @@ function LandingPage() {
         
         {/* HitWebCounter Widget */}
         <a href="https://www.hitwebcounter.com" target="_blank" rel="noopener noreferrer">
-          <img 
+          <img
             src="https://hitwebcounter.com/counter/counter.php?page=21239517&style=0036&nbdigits=5&type=page&initCount=0"
-            title="Counter Widget"
-            alt="Visit counter For Websites"
+            alt="Visit Counter"
           />
         </a>
       </footer>
