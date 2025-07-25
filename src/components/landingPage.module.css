@@ -40,6 +40,7 @@ h1{
 
 .footer {
   display: flex;
+  flex-direction: column;
   font-size: x-large;
   text-align: center;
   justify-content: center;
@@ -50,7 +51,7 @@ h1{
 
 .footer img {
   display: block;
-  margin: .5rem auto;
+  margin: .5rem auto 0;
   border: none;
 
 }
