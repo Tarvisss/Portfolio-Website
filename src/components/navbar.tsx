@@ -12,7 +12,7 @@ type NavbarProps = {
 function Navbar({isDarkMode, setIsDarkMode}: NavbarProps) {
   
   const toggleDarkMode = () => {
-    setIsDarkMode(isDarkMode);
+    setIsDarkMode(!isDarkMode);
   }
   
   return (

@@ -8,7 +8,7 @@ import './App.css'
 import { Routes, Route } from "react-router-dom"
 
 function App() {
-const [isDarkMode, setIsDarkMode] = useState(false)
+const [isDarkMode, setIsDarkMode] = useState(true)
 
   return (
     <>
