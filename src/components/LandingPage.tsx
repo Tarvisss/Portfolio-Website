@@ -6,7 +6,7 @@ function LandingPage() {
       <div className={Styles["card-container"]}>
         <div className={Styles["text-area"]}>
           <p>
-            Dedicated lifelong learner with a strong background in maintenance leadership, project management, and team collaboration. Now applying these strengths to solve problems and build impactful software. 👨🏼‍💻
+            As a lifelong learner, I have built a strong foundation in leadership, project management, and team collaboration through my experience in maintenance operations and other fields. I am both software and mechanically-inclined. I find great satisfaction in seeing complex problems overcome through persistence and creative thinking. Let me solve problems for you. 👨🏼‍💻
           </p>
         </div>
       </div>

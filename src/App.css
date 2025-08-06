@@ -25,13 +25,15 @@ body {
 /* Dark Mode Styles */
 .page-wrapper-dark {
   color: #ffffff;
-  background-image: url("/pexels-marek-piwnicki-3907296-8193814.jpg");
+  background-image: url("public/decorative-background-with-smoke.jpg");
+  background-size: cover;
 }
 
 /* Light Mode Styles */
 .page-wrapper-light {
   color: #000000;
   background-image: url("/vecteezy_ai-generated-minimalist-wave-white-background_38585123.jpg");
+  background-size: cover;
 }
 
 .page-wrapper-light footer {

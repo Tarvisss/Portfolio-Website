@@ -12,7 +12,7 @@ function Experience() {
             <div>
               <h2>Springboard</h2>
               <h3>Student</h3>
-              <p>Completing 800+ hours of hands-on course material, with 1:1 industry expert mentor oversight, and completion of 4 in-depth portfolio projects.</p>
+              <p>Completing 830+ hours of hands-on course material, with 1:1 industry expert mentor oversight, and completion of 4 in-depth portfolio projects.</p>
               <p>Mastering skills in front-end and back-end web development, databases, and data structures and algorithms.</p>
             </div>
             <hr />
@@ -32,7 +32,10 @@ function Experience() {
             <div>
               <h2>Black Mountian sands</h2>
               <h3>Maintenance Technician III</h3>
-              <p>Collaborated with other technicians to maintain safe and consistent plant operations. Each task presented unique challenges, requiring quick problem-solving skills and the ability to react efficiently under pressure.</p>
+              <p>Collaborated with other technicians to maintain safe and consistent plant operations.
+                Implemented new CMMS procedures to maintain uniformity among other technicians.
+                My responsibilities included but not limited to: welding and fabrication, poly fusion, conveyor patches and replacement, rotary kiln repairs, bearing replacement, fan alignment, wash and dry plant maintenance.
+              </p>
             </div>
             <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="aae6384c-cbfa-4bbb-991f-b08bba55138a" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
           </div>

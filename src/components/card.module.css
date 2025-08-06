@@ -74,7 +74,7 @@ h1{
   text-align: center;
   justify-content: center;
   text-overflow: ellipsis;
-  background-color: #051021; /* optional styling */
+  background-color: #000000; /* optional styling */
 }
 
 @media (max-width: 600px) {
