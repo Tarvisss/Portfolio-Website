@@ -30,8 +30,8 @@ body {
   padding: 0 1rem;
   flex-wrap: wrap;
   background-color: #000000;
-  /* background-image: url('public/80567 (1) (1) (1).png');
-  background-size: cover; */
+  background-image: url('/public/80567 (1) (1) (1).png');
+  background-size: cover;
   padding: 0 1rem;
   
   box-shadow: 0px 0px 10px black;
@@ -95,6 +95,7 @@ ul {
 a {
   color: #ffffff;
   text-decoration: none;
+  text-shadow: 1px 1px 1px black;
 }
 
 @media (max-width: 600px) {

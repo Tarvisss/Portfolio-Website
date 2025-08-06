@@ -8,12 +8,6 @@ function Projects() {
 
               <p style={{fontSize: "1.5rem"}}>Click any of the links below to explore one of my latest projects.</p>
               <br />
-              {/* <p style={{fontSize: "1.5rem", lineHeight: ".1"}}>💻💻</p>
-              <p style={{fontSize: "1.5rem", lineHeight: ".1"}}>💻💻💻💻💻</p>
-              <p style={{fontSize: "1.5rem", lineHeight: ".1"}}>💻💻💻💻</p>
-              <p style={{fontSize: "1.5rem", lineHeight: ".1"}}>💻💻💻</p>
-              <p style={{fontSize: "1.5rem", lineHeight: ".1"}}>💻💻</p>
-              <p style={{fontSize: "1.5rem", lineHeight: ".1"}}>⬇️</p> */}
               <div className={Styles["card-container"]}>
                 
                 <div className={Styles["text-area"]}>
