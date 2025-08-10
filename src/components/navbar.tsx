@@ -42,6 +42,9 @@ function Navbar({isDarkMode, setIsDarkMode}: NavbarProps) {
             <li className={Styles["icon-button"]}>
               <Link to="/contact">Contact</Link>
             </li>
+            {/* <li className={Styles["icon-button"]}>
+              <Link to="/music">Music</Link>
+            </li> */}
           </ul>
         </nav>
     </div>

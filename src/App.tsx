@@ -4,6 +4,7 @@ import LandingPage from "./components/LandingPage"
 import Experience from "./components/Experience"
 import Contact from "./components/Contact"
 import Projects from "./components/Projects"
+// import Music from "./components/Music"
 import './App.css'
 import { Routes, Route } from "react-router-dom"
 
@@ -20,6 +21,7 @@ const [isDarkMode, setIsDarkMode] = useState(true)
               <Route path="/experience" element={<Experience/>}/>
               <Route path="/projects" element={<Projects/>}/>
               <Route path="/contact" element={<Contact/>}/>
+              {/* <Route path="/music" element={<Music/>}/> */}
             </Routes>
           </div>
         </div>  
