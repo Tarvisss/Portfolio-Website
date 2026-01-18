@@ -1,28 +1,49 @@
-import Styles from "./landingPage.module.css";
+
+import Box from "@mui/joy/Box";
+import Stack from "@mui/joy/Stack";
+import Typography from "@mui/joy/Typography";
+import Button from "@mui/joy/Button";
+import Link from "@mui/joy/Link";
 
 function LandingPage() {
   return (
-    <div className={Styles["page"]}>
-      <div className={Styles["card-container"]}>
-        <div className={Styles["text-area"]}>
-          <p>
-            As a lifelong learner, I have built a strong foundation in leadership, project management, and team collaboration through my experience in maintenance operations and other fields. I am both software and mechanically-inclined. I find great satisfaction in seeing complex problems overcome through persistence and creative thinking. Let me solve problems for you. 👨🏼‍💻
-          </p>
-        </div>
-      </div>
+    <Box>
+      <Box>
+        <Stack spacing={3}>
+          <Typography level="body-md">
+            I am committed to continuous learning and have built a strong
+            foundation in leadership, project coordination, and team
+            collaboration through hands-on experience in maintenance operations
+            and related roles. I bring both software and mechanical skills, which
+            helps me understand problems from multiple angles and work
+            effectively with diverse teams. I enjoy solving practical, complex
+            problems and take pride in delivering reliable, well thought out
+            solutions. 👨🏼‍💻
+          </Typography>
 
-      <footer className={Styles["footer"]}>
-        <p>Thanks for visiting!</p>
-        
-        {/* HitWebCounter Widget */}
-        <a href="https://www.hitwebcounter.com" target="_blank" rel="noopener noreferrer">
-          <img
-            src="https://hitwebcounter.com/counter/counter.php?page=21239517&style=0036&nbdigits=5&type=page&initCount=0"
-            alt="Visit Counter"
-          />
-        </a>
-      </footer>
-    </div>
+          <Button>
+            Checking Button
+          </Button>
+
+          <Typography level="body-sm" fontWeight="lg">
+            Thanks for visiting!
+          </Typography>
+
+          {/* HitWebCounter Widget */}
+          <Link
+            href="https://www.hitwebcounter.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Box
+              component="img"
+              src="https://hitwebcounter.com/counter/counter.php?page=21239517&style=0036&nbdigits=5&type=page&initCount=0"
+              alt="Visit Counter"
+            />
+          </Link>
+        </Stack>
+      </Box>
+    </Box>
   );
 }
 

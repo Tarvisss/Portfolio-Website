@@ -1,54 +1,97 @@
-import Styles from "./experienceCard.module.css"
+import { Box, Stack, Typography } from "@mui/joy"
+import ExperienceCard from "./ExperienceCard"
 
+const experiences = [
+  {
+    company: "Zelifcam",
+    role: "Software Developer",
+    image: "Zelifcam.png",
+    url: "https://zelifcam.net",
+    descriptions: [
+      "Developed full-stack applications for clients across real estate, manufacturing, medical, legal, and IT industries, adapting quickly to diverse project requirements.",
+      "Integrated third-party services such as Stripe for payments, WebSockets for real-time features, and GraphQL APIs for efficient data access.",
+      "Containerized environments with Docker to streamline development, testing, and deployment workflows.",
+      "Experienced in supporting legacy systems as well as building greenfield projects from scratch."
+    ]
+  },
+  {
+    company: "Springboard",
+    role: "Student",
+    image: "/1_h1smA07x491LsEGJMnJIEA@2x.jpg",
+    url: "https://www.springboard.com",
+    descriptions: [
+      "Completing 830+ hours of hands-on course material, with 1:1 industry expert mentor oversight, and completion of 4 in-depth portfolio projects.",
+      "Mastering skills in front-end and back-end web development, databases, and data structures and algorithms."
+    ]
+  },
+  {
+    company: "Superior Silica Sands",
+    role: "Maintenance Supervisor",
+    image: "/c2711d_7cd40d7e619d44a2b0e415c6fd6e4459~mv2.png",
+    url: "https://www.superiorsilicasands.com",
+    descriptions: [
+      "Directed plant maintenance operations with up to 30 employees, including electricians, welders and equipment operators.",
+      "Trained employees in proper maintenance protocols across the entire project lifecycle, including issue diagnosis, inventory management, lock-out/tag-out procedures, and executing the necessary steps to complete tasks efficiently."
+    ]
+  },
+  {
+    company: "All My Sons",
+    role: "Crew Lead",
+    image: "/AMS_Logo2.jpg",
+    url: "https://www.allmysons.com",
+    descriptions: [
+      "Led teams of up to eight movers, coordinating tasks and maintaining workflow on-site. Managed customer communication to ensure smooth moves and saving the customer money."
+    ]
+  },
+  {
+    company: "Black Mountain Sands",
+    role: "Maintenance Technician III",
+    image: "/Blackmountain.png",
+    url: "https://www.blackmountainsand.com",
+    descriptions: [
+      "Collaborated with other technicians to maintain safe and consistent plant operations. Implemented new CMMS procedures to maintain uniformity among other technicians.",
+      "Responsibilities included: welding and fabrication, poly fusion, conveyor patches and replacement, rotary kiln repairs, bearing replacement, fan alignment, wash and dry plant maintenance."
+    ]
+  }
+];
 
 function Experience() {
-    return (
-     <div className={Styles["page"]}>
-      <h1>Experience</h1>
-      <br />
-      <div className={Styles["card-container"]}>
-        <div className={Styles["text-area"]}>
-          <div className={Styles["text"]}>
-            <div>
-              <h2>Springboard</h2>
-              <h3>Student</h3>
-              <p>Completing 830+ hours of hands-on course material, with 1:1 industry expert mentor oversight, and completion of 4 in-depth portfolio projects.</p>
-              <p>Mastering skills in front-end and back-end web development, databases, and data structures and algorithms.</p>
-            </div>
-            <hr />
-            <div>
-              <h2>Superior Silica Sands</h2>
-              <h3>Maintenance Supervisor</h3>
-              <p>Directed plant maintenance operations with up to 30 employees. including electricians, welders and equipment operators</p>
-                <p>Trained employees in proper maintenance protocols across the entire project lifecycle, including issue diagnosis, inventory management, lock-out/tag-out procedures, and executing the necessary steps to complete tasks efficiently.</p>
-            </div>
-            <hr />
-            <div>
-              <h2>All My Sons</h2>
-              <h3>Crew lead</h3>
-              <p>Led teams of up to eight movers, coordinating tasks and maintaining workflow on-site. Managed customer communication to ensure smooth moves and saving the customer money.</p>
-            </div>
-            <hr />
-            <div>
-              <h2>Black Mountian sands</h2>
-              <h3>Maintenance Technician III</h3>
-              <p>Collaborated with other technicians to maintain safe and consistent plant operations.
-                Implemented new CMMS procedures to maintain uniformity among other technicians.
-                My responsibilities included but not limited to: welding and fabrication, poly fusion, conveyor patches and replacement, rotary kiln repairs, bearing replacement, fan alignment, wash and dry plant maintenance.
-              </p>
-            </div>
-            <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="aae6384c-cbfa-4bbb-991f-b08bba55138a" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
-          </div>
-        </div>
-      </div>
-        <div className={Styles["closing-statement"]}>
-          <p>Please feel free to reach out. I'm always looking to better myself and connect with like minded individuals. </p>
-          
-        </div>
-        <footer className={Styles["footer"]}>
-        <p>Thanks for visiting!</p>
-      </footer>
-    </div>
+  return (
+    <Box sx={{ p: 3 }}>
+      <Typography level="h1" sx={{ mb: 3 }}>Experience</Typography>
+
+      <Stack spacing={2} sx={{ alignItems: 'center' }}>
+        {experiences.map((exp, index) => (
+          <ExperienceCard
+            key={index}
+            company={exp.company}
+            role={exp.role}
+            image={exp.image}
+            url={exp.url}
+            descriptions={exp.descriptions}
+          />
+        ))}
+      </Stack>
+
+      <Box
+        data-iframe-width="150"
+        data-iframe-height="270"
+        data-share-badge-id="aae6384c-cbfa-4bbb-991f-b08bba55138a"
+        data-share-badge-host="https://www.credly.com"
+        sx={{ mt: 3 }}
+      />
+      <script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+
+      <Box sx={{ mt: 4, textAlign: 'center' }}>
+        <Typography level="body-md">
+          Please feel free to reach out. I'm always looking to better myself and connect with like minded individuals.
+        </Typography>
+      </Box>
+
+      <Box component="footer" sx={{ mt: 3, textAlign: 'center' }}>
+        <Typography level="body-sm">Thanks for visiting!</Typography>
+      </Box>
+    </Box>
   );
 }
 
