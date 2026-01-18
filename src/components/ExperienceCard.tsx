@@ -6,9 +6,10 @@ type ExperienceCardProps = {
   descriptions: string[];
   image?: string;
   url?: string;
+  isDarkMode: boolean;
 }
 
-function ExperienceCard({ company, role, descriptions, image, url }: ExperienceCardProps) {
+function ExperienceCard({ company, role, descriptions, image, url, isDarkMode }: ExperienceCardProps) {
   return (
     <Card
       variant="outlined"
@@ -18,14 +19,20 @@ function ExperienceCard({ company, role, descriptions, image, url }: ExperienceC
       underline="none"
       sx={{
         maxWidth: 600,
-        backgroundColor: '#000000',
-        boxShadow: '0 0 15px 5px rgba(255, 255, 255, 0.3)',
+        backgroundColor: isDarkMode
+          ? '#000000'
+          : 'rgba(255, 255, 255, 0.9)',
+        boxShadow: isDarkMode
+          ? '0 0 3px 0px rgba(255, 255, 255, 1)'
+          : '0 0 3px 0px rgba(0, 0, 0, 0.3)',
         border: 'none',
         cursor: url ? 'pointer' : 'default',
-        transition: 'transform 0.2s, box-shadow 0.2s',
+        transition: 'transform 0.2s, box-shadow 0.2s, background-color 0.3s',
         '&:hover': url ? {
           transform: 'scale(1.01)',
-          boxShadow: '0 0 20px 8px rgba(255, 255, 255, 0.5)',
+          boxShadow: isDarkMode
+            ? '0 0 20px 8px rgba(255, 255, 255, 0.3)'
+            : '0 0 20px 8px rgba(0, 0, 0, 0.2)',
         } : {},
       }}
     >
@@ -34,7 +41,7 @@ function ExperienceCard({ company, role, descriptions, image, url }: ExperienceC
           <Box>
             <Typography level="h3">{company}</Typography>
             <Typography level="title-md" sx={{ color: 'text.secondary' }}>
-              {role}
+               :{role}
             </Typography>
           </Box>
           {image && (

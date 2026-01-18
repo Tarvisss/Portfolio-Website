@@ -32,7 +32,7 @@
 }
 
 .page-wrapper-dark [class*="MuiCard-root"] {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(0, 0, 0, 0.65);
   border-color: rgba(255, 255, 255, 0.2);
 }
 
@@ -118,7 +118,7 @@
     radial-gradient(2px 2px at 350px 50px, rgba(255,255,255,0.7), transparent);
   background-size: 500px 300px;
   animation: scrollStars 40s linear infinite;
-  opacity: 0.6;
+  opacity: 0.9;
 }
 
 /* Light mode particles */
@@ -136,7 +136,7 @@
     radial-gradient(1px 1px at 300px 170px, rgba(26,26,46,0.3), transparent);
   background-size: 320px 200px;
   animation: scrollStars 20s linear infinite;
-  opacity: 0.3;
+  opacity: 0.8;
 }
 
 .page-wrapper-light::after {
@@ -148,8 +148,8 @@
     radial-gradient(2px 2px at 150px 250px, #1a1a2e, transparent),
     radial-gradient(2px 2px at 350px 50px, rgba(26,26,46,0.4), transparent);
   background-size: 500px 300px;
-  animation: scrollStars 40s linear infinite;
-  opacity: 0.2;
+  animation: scrollStars 30s linear infinite;
+  opacity: 0.7;
 }
 
 @keyframes scrollStars {

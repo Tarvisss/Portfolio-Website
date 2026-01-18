@@ -40,7 +40,7 @@ const professionalProjects: Project[] = [
 
 function Projects() {
   return (
-    <Box sx={{ p: 3 }}>
+    <Box sx={{ p: 10 }}>
       <Typography level="h1" sx={{ mb: 2 }}>Projects</Typography>
 
       <Typography level="body-lg" sx={{ fontSize: "1.5rem", mb: 4 }}>

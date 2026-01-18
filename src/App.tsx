@@ -21,7 +21,7 @@ function App() {
         <Box sx={{ position: 'relative', zIndex: 1 }}>
           <Routes>
             <Route path="/" element={<LandingPage/>}/>
-            <Route path="/experience" element={<Experience/>}/>
+            <Route path="/experience" element={<Experience isDarkMode={isDarkMode}/>}/>
             <Route path="/projects" element={<Projects/>}/>
             <Route path="/contact" element={<Contact/>}/>
           </Routes>

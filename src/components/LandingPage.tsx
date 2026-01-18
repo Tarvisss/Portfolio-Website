@@ -2,12 +2,11 @@
 import Box from "@mui/joy/Box";
 import Stack from "@mui/joy/Stack";
 import Typography from "@mui/joy/Typography";
-import Button from "@mui/joy/Button";
 import Link from "@mui/joy/Link";
 
 function LandingPage() {
   return (
-    <Box>
+    <Box sx={{ p: 10, pt: 12 }}>
       <Box>
         <Stack spacing={3}>
           <Typography level="body-md">
@@ -21,13 +20,7 @@ function LandingPage() {
             solutions. 👨🏼‍💻
           </Typography>
 
-          <Button>
-            Checking Button
-          </Button>
-
-          <Typography level="body-sm" fontWeight="lg">
-            Thanks for visiting!
-          </Typography>
+         
 
           {/* HitWebCounter Widget */}
           <Link

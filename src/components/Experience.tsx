@@ -1,5 +1,10 @@
 import { Box, Stack, Typography } from "@mui/joy"
 import ExperienceCard from "./ExperienceCard"
+import Footer from "./footer";
+
+type ExperienceProps = {
+  isDarkMode: boolean;
+};
 
 const experiences = [
   {
@@ -28,7 +33,7 @@ const experiences = [
     company: "Superior Silica Sands",
     role: "Maintenance Supervisor",
     image: "/c2711d_7cd40d7e619d44a2b0e415c6fd6e4459~mv2.png",
-    url: "https://www.superiorsilicasands.com",
+    url: "https://www.sssand.com",
     descriptions: [
       "Directed plant maintenance operations with up to 30 employees, including electricians, welders and equipment operators.",
       "Trained employees in proper maintenance protocols across the entire project lifecycle, including issue diagnosis, inventory management, lock-out/tag-out procedures, and executing the necessary steps to complete tasks efficiently."
@@ -55,42 +60,72 @@ const experiences = [
   }
 ];
 
-function Experience() {
+function Experience({ isDarkMode }: ExperienceProps) {
   return (
-    <Box sx={{ p: 3 }}>
-      <Typography level="h1" sx={{ mb: 3 }}>Experience</Typography>
-
-      <Stack spacing={2} sx={{ alignItems: 'center' }}>
+    <Box sx={{ p: 10 }}>
+      <Typography level="h1" sx={{ mb: 5 }}>Experience</Typography>
+       
+      <Stack spacing={2} sx={{ width: '100%', alignItems: 'center' }}>
         {experiences.map((exp, index) => (
-          <ExperienceCard
+          <Box
             key={index}
-            company={exp.company}
-            role={exp.role}
-            image={exp.image}
-            url={exp.url}
-            descriptions={exp.descriptions}
-          />
+            sx={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: 3,
+              // transform: index % 2 === 0 ? 'translateX(-9%)' : 'translateX(9%)',
+              transition: 'transform 0.3s ease',
+            }}
+          >
+            {/* Image on left */}
+            <Box
+              component="img"
+              src="/Right.png"
+              alt=""
+              sx={{
+                padding:2,
+                width: 400,
+                height: 220,
+                objectFit: 'contain',
+              }}
+            />
+
+            <ExperienceCard
+              company={exp.company}
+              role={exp.role}
+              image={exp.image}
+              url={exp.url}
+              descriptions={exp.descriptions}
+              isDarkMode={isDarkMode}
+            />
+
+            {/* Image on right */}
+            <Box
+              component="img"
+              src="/Left.png"
+              alt=""
+              sx={{
+                padding:2,
+                width: 400,
+                height: 220,
+                objectFit: 'contain',
+              }}
+            />
+            <hr />
+          </Box>
         ))}
       </Stack>
-
-      <Box
+       <hr />
+      <Box 
         data-iframe-width="150"
         data-iframe-height="270"
         data-share-badge-id="aae6384c-cbfa-4bbb-991f-b08bba55138a"
         data-share-badge-host="https://www.credly.com"
-        sx={{ mt: 3 }}
+        sx={{ mt: 2, paddingTop: 2 }}
       />
       <script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
 
-      <Box sx={{ mt: 4, textAlign: 'center' }}>
-        <Typography level="body-md">
-          Please feel free to reach out. I'm always looking to better myself and connect with like minded individuals.
-        </Typography>
-      </Box>
-
-      <Box component="footer" sx={{ mt: 3, textAlign: 'center' }}>
-        <Typography level="body-sm">Thanks for visiting!</Typography>
-      </Box>
+      <Footer/>
     </Box>
   );
 }

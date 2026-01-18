@@ -25,8 +25,21 @@ function BinaryRain({ isDarkMode }: BinaryRainProps) {
 
     // Configuration
     const fontSize = 14;
-    const columns = Math.floor(canvas.width / fontSize);
+    const columnWidth = 70; // Wider spacing for words
+    const columns = Math.floor(canvas.width / columnWidth);
     const drops: number[] = Array(columns).fill(1);
+
+    const words = [
+      'Grow', 'Rise', 'Win', 'Gain', 'Lead', 'Build', 'Drive', 'Push', 'Reach', 'Aim',
+      'Strive', 'Thrive', 'Learn', 'Train', 'Plan', 'Skill', 'Craft', 'Grit', 'Will', 'Force',
+      'Edge', 'Peak', 'Climb', 'Step', 'Try', 'Prove', 'Act', 'Shape', 'Form', 'Forge',
+      'Make', 'Earn', 'Score', 'Beat', 'Top', 'Rank', 'Pass', 'Clear', 'Goal', 'Zest',
+      'Move', 'Think', 'Shift', 'Scale', 'Boost', 'Shine', 'Trust', 'Fix', 'Solve', 'Change',
+      'Choose', 'Start', 'End', 'Do', 'Dare', 'Guide', 'Care', 'Help', 'Serve', 'Worth',
+      'Know', 'Own', 'Stand', 'Firm', 'Work', 'Run', 'Ace', 'Pull', 'Mold', 'Lift',
+      'Plot', 'Birth', 'Go', 'Cut', 'Test', 'Mark', 'Place', 'Crest', 'Niche', 'Plus',
+      'Fire', 'Steel', 'Sight', 'Bloom', 'Sprout', 'Head', 'Prize', 'Pay', 'Doer'
+    ];
 
     // Colors based on theme
     const textColor = isDarkMode ? '#230c88ff' : '#0a66c2ff';
@@ -41,8 +54,8 @@ function BinaryRain({ isDarkMode }: BinaryRainProps) {
       ctx.font = `${fontSize}px monospace`;
 
       for (let i = 0; i < drops.length; i++) {
-        // Random 1 or 0
-        const text = Math.random() > 0.5 ? '1' : '0';
+        // Random word from list
+        const text = words[Math.floor(Math.random() * words.length)];
 
         // Vary opacity for depth effect
         const opacity = 0.1 + Math.random() * 0.5;
@@ -50,7 +63,7 @@ function BinaryRain({ isDarkMode }: BinaryRainProps) {
           ? `rgba(255, 255, 255, ${opacity})`
           : `rgba(0, 0, 0, ${opacity})`;
 
-        ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+        ctx.fillText(text, i * columnWidth, drops[i] * fontSize);
 
         // Reset drop to top randomly after reaching bottom
         if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {

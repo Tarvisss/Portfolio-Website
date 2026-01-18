@@ -1,10 +1,10 @@
 
 import { Box, Divider, Link, Stack, Typography } from "@mui/joy"
-
+import Footer from "./footer"
 
 function Contact() {
   return (
-    <Box>
+    <Box sx={{p: 10}}>
       <Typography level="h1">Contact</Typography>
 
       <Box  sx={{ mt: 2 }}>
@@ -26,7 +26,7 @@ function Contact() {
               <Box>
                 <Typography level="h2">Social Links</Typography>
                 <Divider />
-                <Stack direction="row" spacing={2} sx={{ mt: 1 }}>
+                <Stack direction="row" spacing={2} sx={{ mt: 1, justifyContent: 'center' }}>
                   <Link href="https://www.linkedin.com/in/travis-souther" target="_blank">
                     <Box component="img" src="/icons8-linkedin-50 (1).png" sx={{ width: 60 }} alt="LinkedIn" />
                   </Link>
@@ -42,16 +42,7 @@ function Contact() {
           </Box>
         </Box>
       </Box>
-
-      <Box>
-        <Typography level="body-md">
-          Please feel free to reach out. I'm always looking to better myself and connect with like minded individuals.
-        </Typography>
-      </Box>
-
-      <Box component="footer">
-        <Typography level="body-sm">Thanks for visiting!</Typography>
-      </Box>
+       <Footer/>
     </Box>
   );
 }
