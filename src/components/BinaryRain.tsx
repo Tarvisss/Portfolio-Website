@@ -27,7 +27,8 @@ function BinaryRain({ isDarkMode }: BinaryRainProps) {
     const fontSize = 14;
     const columnWidth = 70; // Wider spacing for words
     const columns = Math.floor(canvas.width / columnWidth);
-    const drops: number[] = Array(columns).fill(1);
+    const maxRows = Math.floor(canvas.height / fontSize);
+    const drops: number[] = Array(columns).fill(0).map(() => Math.floor(Math.random() * maxRows));
 
     const words = [
       'Grow', 'Rise', 'Win', 'Gain', 'Lead', 'Build', 'Drive', 'Push', 'Reach', 'Aim',
@@ -43,7 +44,7 @@ function BinaryRain({ isDarkMode }: BinaryRainProps) {
 
     // Colors based on theme
     const textColor = isDarkMode ? '#230c88ff' : '#0a66c2ff';
-    const bgColor = isDarkMode ? 'rgba(10, 10, 26, 0.05)' : 'rgba(193, 196, 199, 0.05)';
+    const bgColor = isDarkMode ? 'rgba(10, 10, 26, 0.2)' : 'rgba(232, 244, 252, 0.2)';
 
     const draw = () => {
       // Semi-transparent background for trail effect
@@ -73,7 +74,7 @@ function BinaryRain({ isDarkMode }: BinaryRainProps) {
       }
     };
 
-    const interval = setInterval(draw, 50);
+    const interval = setInterval(draw, 85);
 
     return () => {
       clearInterval(interval);

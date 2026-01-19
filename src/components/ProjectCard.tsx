@@ -1,4 +1,4 @@
-import { Box, Card, CardCover, Typography, Link } from "@mui/joy"
+import { Box, Card, Typography, Link } from "@mui/joy"
 
 type ProjectCardProps = {
   title: string;
@@ -9,36 +9,43 @@ type ProjectCardProps = {
 
 function ProjectCard({ title, image, url, description }: ProjectCardProps) {
   return (
-    <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-      <Typography level="h3" sx={{ mb: 0.5 }}>
+    <Card
+      component={Link}
+      href={url}
+      target="_blank"
+      underline="none"
+      variant="outlined"
+      sx={{
+        width: 350,
+        cursor: 'pointer',
+        transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+        '&:hover': {
+          transform: 'translateY(-8px)',
+          boxShadow: 'xl',
+        },
+      }}
+    >
+      <Typography level="title-lg" sx={{ fontWeight: 700 }}>
         {title}
       </Typography>
       {description && (
-        <Typography level="body-md" sx={{ mb: 1 }}>
+        <Typography level="body-sm">
           {description}
         </Typography>
       )}
-      <Card
-        component={Link}
-        href={url}
-        target="_blank"
-        underline="none"
+      <Box
+        component="img"
+        src={image}
+        alt={title}
         sx={{
-          width: 320,
-          height: 240,
-          cursor: 'pointer',
-          transition: 'transform 0.2s, box-shadow 0.2s',
-          '&:hover': {
-            transform: 'scale(1.02)',
-            boxShadow: 'lg',
-          },
+          mt: 1,
+          width: '100%',
+          height: 200,
+          objectFit: 'cover',
+          borderRadius: 'sm',
         }}
-      >
-        <CardCover>
-          <img src={image} alt={title} style={{ objectFit: 'cover' }} />
-        </CardCover>
-      </Card>
-    </Box>
+      />
+    </Card>
   );
 }
 

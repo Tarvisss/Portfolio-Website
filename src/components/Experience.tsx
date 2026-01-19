@@ -63,7 +63,11 @@ const experiences = [
 function Experience({ isDarkMode }: ExperienceProps) {
   return (
     <Box sx={{ p: 10 }}>
-      <Typography level="h1" sx={{ mb: 5 }}>Experience</Typography>
+      <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', mb: 5 }}>
+  
+        <Typography level="h1">Experience</Typography>
+       
+      </Box>
        
       <Stack spacing={2} sx={{ width: '100%', alignItems: 'center' }}>
         {experiences.map((exp, index) => (
@@ -83,7 +87,8 @@ function Experience({ isDarkMode }: ExperienceProps) {
               src="/Right.png"
               alt=""
               sx={{
-                padding:2,
+                opacity: .3,
+                padding: 2,
                 width: 400,
                 height: 220,
                 objectFit: 'contain',
@@ -105,7 +110,8 @@ function Experience({ isDarkMode }: ExperienceProps) {
               src="/Left.png"
               alt=""
               sx={{
-                padding:2,
+                opacity: .3,
+                padding: 2,
                 width: 400,
                 height: 220,
                 objectFit: 'contain',
@@ -115,16 +121,6 @@ function Experience({ isDarkMode }: ExperienceProps) {
           </Box>
         ))}
       </Stack>
-       <hr />
-      <Box 
-        data-iframe-width="150"
-        data-iframe-height="270"
-        data-share-badge-id="aae6384c-cbfa-4bbb-991f-b08bba55138a"
-        data-share-badge-host="https://www.credly.com"
-        sx={{ mt: 2, paddingTop: 2 }}
-      />
-      <script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
-
       <Footer/>
     </Box>
   );

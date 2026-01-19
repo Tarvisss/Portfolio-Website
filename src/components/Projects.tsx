@@ -1,4 +1,4 @@
-import { Box, Divider, Stack, Typography } from "@mui/joy"
+import { Box, Divider, Typography } from "@mui/joy"
 import ProjectCard from "./ProjectCard"
 
 const personalProjects = [
@@ -40,22 +40,62 @@ const professionalProjects: Project[] = [
 
 function Projects() {
   return (
-    <Box sx={{ p: 10 }}>
-      <Typography level="h1" sx={{ mb: 2 }}>Projects</Typography>
-
-      <Typography level="body-lg" sx={{ fontSize: "1.5rem", mb: 4 }}>
-        Click any of the cards below to explore my work.
-      </Typography>
+    <Box sx={{ p: 4, pt: 12, minHeight: '100vh' }}>
+      {/* Header Section */}
+      <Box sx={{ textAlign: 'center', mb: 6 }}>
+        <Typography level="h1" sx={{ mb: 2 }}>Projects</Typography>
+        <Typography level="body-lg" sx={{ maxWidth: 600, mx: 'auto' }}>
+          Click any of the cards below to explore my work.
+        </Typography>
+      </Box>
 
       {/* Professional Projects Section */}
-      <Typography level="h2" sx={{ mb: 2 }}>Professional Projects</Typography>
-      {professionalProjects.length > 0 ? (
-        <Stack
-          direction="row"
-          spacing={3}
-          sx={{ flexWrap: 'wrap', justifyContent: 'center', gap: 3, mb: 4 }}
+      <Box sx={{ mb: 6 }}>
+        <Typography level="h2" sx={{ textAlign: 'center', mb: 4 }}>
+          Professional Projects
+        </Typography>
+        {professionalProjects.length > 0 ? (
+          <Box
+            sx={{
+              display: 'flex',
+              flexWrap: 'wrap',
+              justifyContent: 'center',
+              gap: 4,
+            }}
+          >
+            {professionalProjects.map((project, index) => (
+              <ProjectCard
+                key={index}
+                title={project.title}
+                image={project.image}
+                url={project.url}
+                description={project.description}
+              />
+            ))}
+          </Box>
+        ) : (
+          <Typography level="body-md" sx={{ textAlign: 'center', color: 'text.secondary' }}>
+            Coming soon...
+          </Typography>
+        )}
+      </Box>
+
+      <Divider sx={{ my: 6, mx: 'auto', maxWidth: 800 }} />
+
+      {/* Personal Projects Section */}
+      <Box sx={{ mb: 6 }}>
+        <Typography level="h2" sx={{ textAlign: 'center', mb: 4 }}>
+          Personal Projects
+        </Typography>
+        <Box
+          sx={{
+            display: 'flex',
+            flexWrap: 'wrap',
+            justifyContent: 'center',
+            gap: 4,
+          }}
         >
-          {professionalProjects.map((project, index) => (
+          {personalProjects.map((project, index) => (
             <ProjectCard
               key={index}
               title={project.title}
@@ -64,42 +104,11 @@ function Projects() {
               description={project.description}
             />
           ))}
-        </Stack>
-      ) : (
-        <Typography level="body-md" sx={{ mb: 4, color: 'text.secondary' }}>
-          Coming soon...
-        </Typography>
-      )}
-
-      <Divider sx={{ my: 4 }} />
-
-      {/* Personal Projects Section */}
-      <Typography level="h2" sx={{ mb: 2 }}>Personal Projects</Typography>
-      <Stack
-        direction="row"
-        spacing={3}
-        sx={{ flexWrap: 'wrap', justifyContent: 'center', gap: 3 }}
-      >
-        {personalProjects.map((project, index) => (
-          <ProjectCard
-            key={index}
-            title={project.title}
-            image={project.image}
-            url={project.url}
-            description={project.description}
-          />
-        ))}
-      </Stack>
-
-      <Box sx={{ mt: 4, textAlign: 'center' }}>
-        <Typography level="body-md">
-          Please visit the contact section if you'd like help with your next project
-        </Typography>
+        </Box>
       </Box>
 
-      <Box component="footer" sx={{ mt: 3, textAlign: 'center' }}>
-        <Typography level="body-sm">Thanks for visiting!</Typography>
-      </Box>
+      {/* Footer Section */}
+\     
     </Box>
   );
 }

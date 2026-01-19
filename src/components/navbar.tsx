@@ -60,8 +60,8 @@ function Navbar({ isDarkMode, setIsDarkMode }: NavbarProps) {
             fontWeight: 700,
             fontFamily: "Agamtoh",
             background: isDarkMode
-              ? "linear-gradient(135deg, #eeeeeeff 0%, #8634d8ff 100%)"
-              : "linear-gradient(135deg, #3f0897ff 0%, #7a91a8ff 100%)",
+              ? "linear-gradient(135deg, #eeeeeeff 0%, #1a128dff 100%)"
+              : "linear-gradient(135deg, #3561c0ff 0%, #001224ff 100%)",
             backgroundClip: "text",
             WebkitBackgroundClip: "text",
             WebkitTextFillColor: "transparent",
