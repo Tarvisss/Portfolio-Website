@@ -75,6 +75,7 @@ function Experience({ isDarkMode }: ExperienceProps) {
             sx={{
               display: 'flex',
               alignItems: 'center',
+              justifyContent: 'center',
               gap: 3,
               // transform: index % 2 === 0 ? 'translateX(-9%)' : 'translateX(9%)',
               transition: 'transform 0.3s ease',
