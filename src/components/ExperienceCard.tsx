@@ -21,6 +21,8 @@ function ExperienceCard({ company, role, descriptions, image, url, isDarkMode }:
         width: { xs: 'calc(100% - 32px)', md: 600 },
         maxWidth: '100%',
         minHeight: 200,
+        overflow: 'hidden',
+        wordBreak: 'break-word',
         backgroundColor: isDarkMode
           ? '#000000'
           : 'rgba(255, 255, 255, 0.9)',
@@ -39,21 +41,21 @@ function ExperienceCard({ company, role, descriptions, image, url, isDarkMode }:
       }}
     >
       <CardContent>
-        <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 2 }}>
-          <Box>
-            <Typography level="h3">{company}</Typography>
-            <Typography level="title-md" sx={{ color: 'text.secondary' }}>
-               :{role}
-            </Typography>
-          </Box>
+        <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' }, justifyContent: 'space-between', alignItems: { xs: 'center', md: 'flex-start' }, gap: 2 }}>
           {image && (
             <Box
               component="img"
               src={image}
               alt={company}
-              sx={{ width: 80, height: 80, objectFit: 'contain', flexShrink: 0 }}
+              sx={{ width: { xs: 60, md: 80 }, height: { xs: 60, md: 80 }, objectFit: 'contain', flexShrink: 0, order: { xs: -1, md: 1 } }}
             />
           )}
+          <Box sx={{ textAlign: { xs: 'center', md: 'left' } }}>
+            <Typography level="h3">{company}</Typography>
+            <Typography level="title-md" sx={{ color: 'text.secondary' }}>
+               :{role}
+            </Typography>
+          </Box>
         </Box>
         <Stack spacing={1} sx={{ mt: 2 }}>
           {descriptions.map((desc, index) => (
