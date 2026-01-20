@@ -62,7 +62,7 @@ const experiences = [
 
 function Experience({ isDarkMode }: ExperienceProps) {
   return (
-    <Box sx={{ p: { xs: 2, md: 10 }, pt: { xs: 12, md: 10 } }}>
+    <Box sx={{ p: { xs: 2, md: 10 }, pt: { xs: 12, md: 10 }, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
       <Box sx={{ textAlign: 'center', mb: 5 }}>
         <Typography level="h1" sx={{ textShadow: isDarkMode ? '0 0 10px rgba(255, 255, 255, 0.8)' : '2px 2px 4px rgba(0, 0, 0, 0.3)' }}>Experience</Typography>
         <Divider sx={{ mt: 2, mx: 'auto', width: { xs: 200, md: 400 } }} />
@@ -76,7 +76,7 @@ function Experience({ isDarkMode }: ExperienceProps) {
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
-              gap: 3,
+              gap: { xs: 0, md: 3 },
               // transform: index % 2 === 0 ? 'translateX(-9%)' : 'translateX(9%)',
               transition: 'transform 0.3s ease',
             }}
