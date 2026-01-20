@@ -1,10 +1,15 @@
 
 import Box from "@mui/joy/Box";
 import Card from "@mui/joy/Card";
+import Divider from "@mui/joy/Divider";
 import Typography from "@mui/joy/Typography";
 import Link from "@mui/joy/Link";
 
-function LandingPage() {
+type LandingPageProps = {
+  isDarkMode: boolean;
+};
+
+function LandingPage({ isDarkMode }: LandingPageProps) {
   return (
     <Box sx={{
       p: 4,
@@ -15,7 +20,10 @@ function LandingPage() {
       alignItems: 'center',
       justifyContent: 'space-between'
     }}>
-      <Typography level="h1" sx={{ mb: 4 }}>Welcome</Typography>
+      <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', mb: 4 }}>
+        <Typography level="h1" sx={{ mb: 2, textShadow: isDarkMode ? '0 0 10px rgba(255, 255, 255, 0.8)' : '2px 2px 4px rgba(0, 0, 0, 0.3)' }}>Welcome</Typography>
+        <Divider sx={{ width: 400 }} />
+      </Box>
 
       {/* Welcome Card */}
       <Card
@@ -25,7 +33,7 @@ function LandingPage() {
           width: '100%',
           p: 4,
           borderRadius: 'xl',
-          backdropFilter: 'blur(10px)',
+          // backdropFilter: 'blur(10px)',
           boxShadow: 'lg',
           textAlign: 'center',
         }}
@@ -36,9 +44,9 @@ function LandingPage() {
           src="/received_384379397843857.jpeg"
           alt="Travis Souther"
           sx={{
-            width: 160,
-            height: 160,
-            borderRadius: '15%',
+            width: 200,
+            height: 200,
+            borderRadius: '20%',
             objectFit: 'cover',
             boxShadow: 'lg',
             border: '3px solid',
@@ -50,7 +58,7 @@ function LandingPage() {
         />
 
         {/* Description below */}
-        <Typography level="body-lg" sx={{ fontSize: '1.15rem' }}>
+        <Typography level="body-lg" sx={{ fontSize: '1.15rem', textAlign: "center" }}>
           I am committed to continuous learning and have built a strong
           foundation in leadership, project coordination, and team
           collaboration through hands-on experience in maintenance operations

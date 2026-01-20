@@ -1,6 +1,10 @@
 import { Box, Divider, Typography } from "@mui/joy"
 import ProjectCard from "./ProjectCard"
 
+type ProjectsProps = {
+  isDarkMode: boolean;
+};
+
 const personalProjects = [
   {
     title: "Jam Space",
@@ -38,12 +42,13 @@ const professionalProjects: Project[] = [
   }
 ];
 
-function Projects() {
+function Projects({ isDarkMode }: ProjectsProps) {
   return (
     <Box sx={{ p: 4, pt: 12, minHeight: '100vh' }}>
       {/* Header Section */}
       <Box sx={{ textAlign: 'center', mb: 6 }}>
-        <Typography level="h1" sx={{ mb: 2 }}>Projects</Typography>
+        <Typography level="h1" sx={{ mb: 2, textShadow: isDarkMode ? '0 0 10px rgba(255, 255, 255, 0.8)' : '2px 2px 4px rgba(0, 0, 0, 0.3)' }}>Projects</Typography>
+        <Divider sx={{ mb: 2, mx: 'auto', width: 400 }} />
         <Typography level="body-lg" sx={{ maxWidth: 600, mx: 'auto' }}>
           Click any of the cards below to explore my work.
         </Typography>

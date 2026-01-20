@@ -1,4 +1,4 @@
-import { Box, Stack, Typography } from "@mui/joy"
+import { Box, Divider, Stack, Typography } from "@mui/joy"
 import ExperienceCard from "./ExperienceCard"
 import Footer from "./footer";
 
@@ -63,10 +63,9 @@ const experiences = [
 function Experience({ isDarkMode }: ExperienceProps) {
   return (
     <Box sx={{ p: 10 }}>
-      <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', mb: 5 }}>
-  
-        <Typography level="h1">Experience</Typography>
-       
+      <Box sx={{ textAlign: 'center', mb: 5 }}>
+        <Typography level="h1" sx={{ textShadow: isDarkMode ? '0 0 10px rgba(255, 255, 255, 0.8)' : '2px 2px 4px rgba(0, 0, 0, 0.3)' }}>Experience</Typography>
+        <Divider sx={{ mt: 2, mx: 'auto', width: 400 }} />
       </Box>
        
       <Stack spacing={2} sx={{ width: '100%', alignItems: 'center' }}>
@@ -121,7 +120,9 @@ function Experience({ isDarkMode }: ExperienceProps) {
           </Box>
         ))}
       </Stack>
-      <Footer/>
+      <Box sx={{padding: 8}}>
+        <Footer/>
+      </Box>
     </Box>
   );
 }

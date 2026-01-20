@@ -27,9 +27,9 @@ function App() {
         <Navbar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode}/>
         <Box sx={{ position: 'relative', zIndex: 1 }}>
           <Routes>
-            <Route path="/" element={<LandingPage/>}/>
+            <Route path="/" element={<LandingPage isDarkMode={isDarkMode}/>}/>
             <Route path="/experience" element={<Experience isDarkMode={isDarkMode}/>}/>
-            <Route path="/projects" element={<Projects/>}/>
+            <Route path="/projects" element={<Projects isDarkMode={isDarkMode}/>}/>
             <Route path="/contact" element={<Contact isDarkMode={isDarkMode}/>}/>
           </Routes>
         </Box>

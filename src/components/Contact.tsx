@@ -9,7 +9,10 @@ type ContactProps = {
 function Contact({ isDarkMode }: ContactProps) {
   return (
     <Box sx={{ p: 4, pt: 12, display: 'flex', flexDirection: 'column', alignItems: 'center', minHeight: '100vh' }}>
-      <Typography level="h1" sx={{ mb: 4 }}>Contact</Typography>
+      <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', mb: 4 }}>
+        <Typography level="h1" sx={{ mb: 2, textShadow: isDarkMode ? '0 0 10px rgba(255, 255, 255, 0.8)' : '2px 2px 4px rgba(0, 0, 0, 0.3)' }}>Contact</Typography>
+        <Divider sx={{ width: 400 }} />
+      </Box>
 
       <Stack direction={{ xs: 'column', md: 'row' }} spacing={3} sx={{ width: '100%', maxWidth: 900, justifyContent: 'center' }}>
         {/* Contact Info Card */}

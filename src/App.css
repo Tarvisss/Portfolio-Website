@@ -32,8 +32,9 @@
 }
 
 .page-wrapper-dark [class*="MuiCard-root"] {
-  background-color: rgba(0, 0, 0, 0.65);
-  border-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(15, 15, 35, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4), 0 0 20px rgba(100, 100, 255, 0.05);
 }
 
 .page-wrapper-dark [class*="MuiCardCover"] {
@@ -56,7 +57,7 @@
 }
 
 .page-wrapper-light [class*="MuiCard-root"] {
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.6);
   border-color: rgba(0, 0, 0, 0.1);
 }
 
