@@ -57,7 +57,7 @@ function ExperienceCard({ company, role, descriptions, image, url, isDarkMode }:
         </Box>
         <Stack spacing={1} sx={{ mt: 2 }}>
           {descriptions.map((desc, index) => (
-            <Typography key={index} level="body-md">
+            <Typography key={index} level="body-md" sx={{ textAlign: 'center' }}>
               {desc}
             </Typography>
           ))}

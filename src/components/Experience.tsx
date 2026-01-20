@@ -62,10 +62,10 @@ const experiences = [
 
 function Experience({ isDarkMode }: ExperienceProps) {
   return (
-    <Box sx={{ p: 10 }}>
+    <Box sx={{ p: { xs: 2, md: 10 }, pt: { xs: 12, md: 10 } }}>
       <Box sx={{ textAlign: 'center', mb: 5 }}>
         <Typography level="h1" sx={{ textShadow: isDarkMode ? '0 0 10px rgba(255, 255, 255, 0.8)' : '2px 2px 4px rgba(0, 0, 0, 0.3)' }}>Experience</Typography>
-        <Divider sx={{ mt: 2, mx: 'auto', width: 400 }} />
+        <Divider sx={{ mt: 2, mx: 'auto', width: { xs: 200, md: 400 } }} />
       </Box>
        
       <Stack spacing={2} sx={{ width: '100%', alignItems: 'center' }}>
@@ -86,6 +86,7 @@ function Experience({ isDarkMode }: ExperienceProps) {
               src="/Right.png"
               alt=""
               sx={{
+                display: { xs: 'none', md: 'block' },
                 opacity: .3,
                 padding: 2,
                 width: 400,
@@ -109,6 +110,7 @@ function Experience({ isDarkMode }: ExperienceProps) {
               src="/Left.png"
               alt=""
               sx={{
+                display: { xs: 'none', md: 'block' },
                 opacity: .3,
                 padding: 2,
                 width: 400,
@@ -120,7 +122,7 @@ function Experience({ isDarkMode }: ExperienceProps) {
           </Box>
         ))}
       </Stack>
-      <Box sx={{padding: 8}}>
+      <Box sx={{ padding: { xs: 2, md: 8 } }}>
         <Footer/>
       </Box>
     </Box>
