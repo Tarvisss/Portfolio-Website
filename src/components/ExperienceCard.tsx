@@ -19,7 +19,7 @@ function ExperienceCard({ company, role, descriptions, image, url, isDarkMode }:
       underline="none"
       sx={{
         width: { xs: '100%', md: 600 },
-        maxWidth: 600,
+        maxWidth: '100%',
         minHeight: 200,
         backgroundColor: isDarkMode
           ? '#000000'
